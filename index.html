@@ -1,0 +1,152 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoiceUP Festival - Let's VoiceUP Together!</title>
+    
+    <!-- Meta SEO primar -->
+    <meta name="title" content="VoiceUP Festival - Let's VoiceUP Together!" />
+    <meta name="description" content="Cel mai mare festival de muzică pentru copii și tineret. Înscrie-te acum la VoiceUP Festival 2025 și urcă pe scena succesului!" />
+    <meta name="keywords" content="festival muzica, copii, tineret, concurs muzica, canto, VoiceUP, Bucuresti, OMG Music" />
+    <meta name="author" content="VoiceUP Festival" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://voiceup-festival.ro/" />
+    <meta property="og:title" content="VoiceUP Festival - Let's VoiceUP Together!" />
+    <meta property="og:description" content="Urcă pe scena VoiceUP Festival! Cel mai mare concurs de muzică pentru copii pe 13 Decembrie 2025." />
+    <meta property="og:image" content="https://i.postimg.cc/KztjG9sK/logo-v2.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="VoiceUP Festival - Let's VoiceUP Together!" />
+    <meta property="twitter:description" content="Urcă pe scena VoiceUP Festival! Cel mai mare concurs de muzică pentru copii pe 13 Decembrie 2025." />
+    <meta property="twitter:image" content="https://i.postimg.cc/KztjG9sK/logo-v2.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/KztjG9sK/logo-v2.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.snow.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.fbq = window.fbq || function(){};
+      window.ttq = window.ttq || { track: function(){} };
+
+      tailwind.config = {
+          theme: {
+              extend: {
+                  fontFamily: {
+                      'sans': ['Nunito', 'sans-serif'],
+                      'alfa-slab-one': ['"Alfa Slab One"', 'cursive'],
+                  },
+                  colors: {
+                      'brand-purple': '#7C3AED',
+                      'brand-pink': '#F472B6',
+                      'brand-yellow': '#FBBF24',
+                      'brand-dark': '#2E1065',
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Nunito', sans-serif; cursor: none; overflow-x: hidden; background-color: #f3f4f6; }
+        .custom-cursor { position: fixed; top: 0; left: 0; width: 28px; height: 28px; pointer-events: none; z-index: 100000; color: #000; transition: transform 0.1s ease-out; will-change: transform; }
+        @media (max-width: 768px) { .custom-cursor { display: none; } body { cursor: auto; } }
+        .page-transition-enter { animation: pageEnter 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes pageEnter { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+        @keyframes animatedGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        #global-animated-bg { position: fixed; inset: 0; background-image: linear-gradient(-45deg, #7C3AED, #F472B6, #7C3AED, #F472B6); background-size: 400% 400%; animation: animatedGradient 15s ease infinite; opacity: 0.9; z-index: -10; }
+        .floating-element { position: absolute; opacity: 0.6; pointer-events: none; animation: gentleFloat 10s infinite ease-in-out alternate; }
+        @keyframes gentleFloat { from { transform: translateY(0px); } to { transform: translateY(-25px); } }
+        @keyframes logoFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .animation-logo-float { animation: logoFloat ease-in-out infinite; }
+        .nav-cta-animated-btn { position: relative; z-index: 1; }
+        .nav-cta-animated-btn::after { content: ''; position: absolute; inset: -4px; border-radius: 9999px; background: #F472B6; opacity: 0.4; z-index: -1; animation: pulseEffect 1.5s infinite; }
+        @keyframes pulseEffect { 0% { transform: scale(0.9); opacity: 0.7; } 100% { transform: scale(1.4); opacity: 0; } }
+        .ql-editor { font-family: 'Nunito', sans-serif; }
+
+        /* Nav Hover Effects */
+        .desktop-nav-link { position: relative; z-index: 1; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .desktop-nav-link::before { content: ''; position: absolute; inset: -2px -10px; z-index: -1; border-radius: 12px; transform: scale(0.8) rotate(0deg); opacity: 0; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .desktop-nav-link:hover { color: white !important; transform: translateY(-2px) rotate(-3deg); }
+        .desktop-nav-link:hover::before { opacity: 1; transform: scale(1) rotate(0deg); }
+        .nav-color-1:hover::before { background-color: #7C3AED; }
+        .nav-color-2:hover::before { background-color: #F472B6; }
+        .nav-color-3:hover::before { background-color: #FBBF24; }
+        .nav-color-4:hover::before { background-color: #3b82f6; }
+        .nav-color-5:hover::before { background-color: #10b981; }
+        .nav-color-6:hover::before { background-color: #8b5cf6; }
+        .nav-note-icon { position: absolute; top: -12px; right: -10px; opacity: 0; transform: translateY(10px) rotate(20deg); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); pointer-events: none; color: #2E1065; }
+        .desktop-nav-link:hover .nav-note-icon { opacity: 1; transform: translateY(0) rotate(0deg); }
+        
+        /* Sticky Footer Animations */
+        @keyframes stickyPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+        .sticky-pulse { animation: stickyPulse 2s infinite ease-in-out; }
+        
+        @keyframes stickyShake { 0%, 100% { transform: translateX(0); } 10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); } 20%, 40%, 60%, 80% { transform: translateX(3px); } }
+        .sticky-shake { animation: stickyShake 1.5s infinite; }
+
+        @keyframes stickyVibe { 0%, 100% { transform: scale(1) rotate(0deg); } 25% { transform: scale(1.01) rotate(0.5deg); } 75% { transform: scale(1.01) rotate(-0.5deg); } }
+        .sticky-vibe { animation: stickyVibe 0.2s infinite linear; }
+
+        @keyframes stickyGlow { 0%, 100% { box-shadow: 0 0 10px rgba(244, 114, 182, 0.4); } 50% { box-shadow: 0 0 25px rgba(244, 114, 182, 0.8), 0 0 40px rgba(124, 58, 237, 0.4); } }
+        .sticky-glow { animation: stickyGlow 2s infinite; }
+
+        @keyframes stickyMarquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        .sticky-marquee-content { animation: stickyMarquee 15s linear infinite; white-space: nowrap; display: inline-block; }
+
+        /* Caching & Smoothness helpers */
+        .swiper-slide { transform: translateZ(0); backface-visibility: hidden; }
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?deps=react@18.2.0,react-dom@18.2.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.2.0,react-dom@18.2.0",
+    "swiper": "https://esm.sh/swiper@11.0.7",
+    "swiper/": "https://esm.sh/swiper@11.0.7/",
+    "swiper/react": "https://esm.sh/swiper@11.0.7/react?deps=react@18.2.0",
+    "swiper/modules": "https://esm.sh/swiper@11.0.7/modules",
+    "xlsx": "https://esm.sh/xlsx",
+    "canvas-confetti": "https://esm.sh/canvas-confetti@1.9.2",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "prop-types": "https://esm.sh/prop-types@15.8.1",
+    "quill": "https://esm.sh/quill@1.3.7",
+    "react-quill": "https://esm.sh/react-quill@2.0.0?deps=react@18.2.0,react-dom@18.2.0,quill@1.3.7,prop-types@15.8.1",
+    "emoji-picker-react": "https://esm.sh/emoji-picker-react@4.9.2?deps=react@18.2.0,react-dom@18.2.0",
+    "sonner": "https://esm.sh/sonner@1.4.3?deps=react@18.2.0,react-dom@18.2.0",
+    "clsx": "https://esm.sh/clsx",
+    "tailwind-merge": "https://esm.sh/tailwind-merge",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="antialiased">
+    <div id="root"></div>
+    <div id="modal-root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

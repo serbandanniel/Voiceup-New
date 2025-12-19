@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api.php
+Disallow: /config/
+Disallow: /smartbill.php
+
+Sitemap: https://voiceup-festival.ro/sitemap.xml
